@@ -4,25 +4,26 @@
     {
         static void Main(string[] args)
         {
-            // for (int i = 1; i < 6; i++)
-            int i = 1;
-            while (true)
-            {
+                string [] favcolor = new string [3];
+                for (int i = 0; i < favcolor.Length; i++)
+                {
                 Console.BackgroundColor = ConsoleColor.White;
                 Console.ForegroundColor = ConsoleColor.Black;
-
-                Console.WriteLine("\nIteration {0}", i);
+                Console.WriteLine("\nIteration {0}", i+1);
 
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("Enter your color : ");
+                favcolor[i] = Console.ReadLine();
 
-                Console.Write("Enter your color: ");
-                string color = new(Console.ReadLine());
-                if (color == "stop")
+                if (favcolor[i] == "stop")
                 {
                     Console.WriteLine("The cycle has been stopped");
                     break;
                 }
+            }
+            foreach (var color in favcolor)
+            {
                 switch (color)
                 {
                     case "red":
@@ -81,8 +82,9 @@
                         break;
 
 
+
+
                 }
-                i++;
             }
             Console.ReadKey();
         }
