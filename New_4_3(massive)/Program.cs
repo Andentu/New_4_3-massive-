@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-                string [] favcolor = new string [3];
-                for (int i = 0; i < favcolor.Length; i++)
+                string [] favcolor = new string [3]; // создаем новый массив, выделяем под него память и указываем его размерность
+                for (int i = 0; i < favcolor.Length; i++) // цикл, зависящий от длины (размерности) массива
                 {
                 Console.BackgroundColor = ConsoleColor.White;
                 Console.ForegroundColor = ConsoleColor.Black;
@@ -22,7 +22,8 @@
                     break;
                 }
             }
-            foreach (var color in favcolor)
+            foreach (var color in favcolor) // цикл foreach, который представляет собой перебор всех элементов массива. По сути - это обращение к счетчику.
+                                            // При этом создается новая переменная color, которая каждый раз берез значение очередного элемента из массива favcolor
             {
                 switch (color)
                 {
